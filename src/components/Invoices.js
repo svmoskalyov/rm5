@@ -20,7 +20,7 @@ const NavItem = styled(NavLink)`
   }
 `;
 
-export const Invoices = () => {
+const Invoices = () => {
   const [invoices, setInvoices] = useState([]);
 
   useEffect(() => {
@@ -33,7 +33,8 @@ export const Invoices = () => {
         as="aside"
         display="flex"
         flexDirection="column"
-        p={3}
+        px={5}
+        py={2}
         borderRight="1px solid black"
       >
         {invoices.map(({ id }) => (
@@ -46,3 +47,5 @@ export const Invoices = () => {
     </Box>
   );
 };
+
+export default Invoices;
